@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "d88f9bf6-b7b9-465a-9533-620c480cd729",
+		"name": "TramontinaFilmes/Filmes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "New Filme",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Homem Aranha O retornp\",\r\n    \"duracao\" : 60,\r\n    \"sinopse\" : \"O retorno de um filme muito divertido\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Filme/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Filme",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Filme",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/api/Filme/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Filme",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Filme",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Homem Aranha O retorno\",\r\n    \"duracao\" : 60,\r\n    \"sinopse\" : \"O retorno de um filme muito divertido\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Filme/2db1b5d9-54f0-42ef-a30a-4aeaf13cd5b4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Filme",
+						"2db1b5d9-54f0-42ef-a30a-4aeaf13cd5b4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
