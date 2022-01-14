@@ -48,7 +48,7 @@ namespace TramontinaFilmes.WebApi.Infraestrutura
                                       "  FROM TramontinaFilmes.dbo.Sessoes sessoes, " +
                                       "       TramontinaFilmes.dbo.Filmes filmes " +
                                       " WHERE sessoes.FilmeId = filmes.Id " +
-                                      (sessaoFilmeInputModel.NomeFilme.Length == 0 ? " " : " AND filmes.Titulo LIKE '%" + sessaoFilmeInputModel.NomeFilme + "%'") +
+                                      (sessaoFilmeInputModel.NomeFilme == null ? " " : " AND filmes.Titulo LIKE '%" + sessaoFilmeInputModel.NomeFilme + "%'") +
                                       (sessaoFilmeInputModel.Dia == 0 ? " " : " AND sessoes.Dia = " + sessaoFilmeInputModel.Dia) +
                                       (sessaoFilmeInputModel.Mes == 0 ? " " : " AND sessoes.Mes = " + sessaoFilmeInputModel.Mes) +
                                       (sessaoFilmeInputModel.Ano == 0 ? " " : " AND sessoes.Ano = " + sessaoFilmeInputModel.Ano);
