@@ -6,6 +6,7 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace TramontinaFilmes.WebApi.Controllers
 {
@@ -45,7 +46,9 @@ namespace TramontinaFilmes.WebApi.Controllers
         {
             if (!Guid.TryParse(id, out var guid))
             {
-                return BadRequest("Id inválido");
+                string error = "Id inválido";
+                _logger.LogError(error);
+                return BadRequest(error);
             }
 
             var filme = await _filmesRepositorio.RecuperarPorIdAsync(guid, cancellationToken);
@@ -70,10 +73,26 @@ namespace TramontinaFilmes.WebApi.Controllers
         public async Task<IActionResult> RecuperarPorIdAsync(string id, CancellationToken cancellationToken)
         {
             if (!Guid.TryParse(id, out var guid))
-                return BadRequest("Id inválido");
+            {
+                string error = "Id inválido";
+                _logger.LogError(error);
+                return BadRequest(error);
+            }
+
             var filme = await _filmesRepositorio.RecuperarPorIdAsync(guid, cancellationToken);
             if (filme == null)
                 return NotFound();
+            return Ok(filme);
+        }
+
+        [HttpGet()]
+        public async Task<IActionResult> RecuperarTodosAsync(CancellationToken cancellationToken)
+        {
+            var filme = await _filmesRepositorio.RecuperarTodosAsync();
+
+            if (filme == null)
+                return NotFound();
+
             return Ok(filme);
         }
     }

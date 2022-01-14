@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace TramontinaFilmes.WebApi.Infraestrutura
 {
@@ -30,6 +31,13 @@ namespace TramontinaFilmes.WebApi.Infraestrutura
             return await _dbContext
                             .Filmes
                             .FirstOrDefaultAsync(c => c.Id == id, cancellationToken);
+        }
+
+        public async Task<IEnumerable<Filme>> RecuperarTodosAsync()
+        {
+            return await _dbContext
+                            .Filmes
+                            .AsQueryable().ToListAsync();
         }
 
         public async Task CommitAsync(CancellationToken cancellationToken = default)

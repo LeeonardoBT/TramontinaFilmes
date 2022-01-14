@@ -67,7 +67,12 @@ namespace TramontinaFilmes.WebApi.Controllers
         public async Task<IActionResult> Atualizar(string id, [FromBody] SessaoInputModel sessaoInputModel, CancellationToken cancellationToken)
         {
             if (!Guid.TryParse(id, out var guid))
+            {
+                string error = "Id inválido"; 
+                _logger.LogError(error);
                 return BadRequest("Id inválido");
+            }
+                
             var sessao = await _sessoesRepositorio.RecuperarPorIdAsync(guid, cancellationToken);
             if (sessao == null)
                 return NotFound();
@@ -115,6 +120,8 @@ namespace TramontinaFilmes.WebApi.Controllers
         {
             if (!Guid.TryParse(id, out var guid))
             {
+                string error = "Id inválido";
+                _logger.LogError(error);
                 return BadRequest("Id inválido");
             }
 
@@ -147,6 +154,8 @@ namespace TramontinaFilmes.WebApi.Controllers
         {
             if (!Guid.TryParse(id, out var guid))
             {
+                string error = "Id inválido";
+                _logger.LogError(error);
                 return BadRequest("Id inválido");
             }
 
@@ -170,6 +179,19 @@ namespace TramontinaFilmes.WebApi.Controllers
             }
 
             var sessao = await _sessoesRepositorio.RecuperarSecoesFilme(sessaoFilmeInputModel, cancellationToken);
+            if (sessao == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(sessao);
+        }
+
+
+        [HttpGet()]
+        public async Task<IActionResult> RecuperarTodosAsync(CancellationToken cancellationToken)
+        {
+            var sessao = await _sessoesRepositorio.RecuperarTodosAsync();
             if (sessao == null)
             {
                 return NotFound();

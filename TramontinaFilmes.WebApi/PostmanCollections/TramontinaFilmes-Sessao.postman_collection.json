@@ -157,6 +157,39 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Search All Sessao",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"filmeId\" : \"7bb7fc1b-72b4-42a5-b538-ecda18eeb030\",\r\n    \"dia\" : 10,\r\n    \"mes\" : 20,\r\n    \"ano\" : 10,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 1,\r\n    \"quantidadeLugares\" : 2,\r\n    \"preco\" : 1.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Sessao/145c4705-0e9f-490f-a90a-6d1ff0d59aca",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Sessao",
+						"145c4705-0e9f-490f-a90a-6d1ff0d59aca"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

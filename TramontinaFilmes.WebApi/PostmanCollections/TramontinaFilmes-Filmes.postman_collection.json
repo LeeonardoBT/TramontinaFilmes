@@ -57,21 +57,12 @@
 			"response": []
 		},
 		{
-			"name": "Edit Filme",
+			"name": "Search All Filme",
 			"request": {
-				"method": "PUT",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"titulo\" : \"Homem Aranha O retorno\",\r\n    \"duracao\" : 60,\r\n    \"sinopse\" : \"O retorno de um filme muito divertido\"\r\n}\r\n",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:5000/api/Filme/2db1b5d9-54f0-42ef-a30a-4aeaf13cd5b4",
+					"raw": "http://localhost:5000/api/Filme/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -80,7 +71,37 @@
 					"path": [
 						"api",
 						"Filme",
-						"2db1b5d9-54f0-42ef-a30a-4aeaf13cd5b4"
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Filme",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"titulo\" : \"Pensamentos de Venâncio\",\r\n    \"duracao\" : 120,\r\n    \"sinopse\" : \"Um filme baseado em fatos reais\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/Filme/48450d55-192f-467c-b718-521c530a7330",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"Filme",
+						"48450d55-192f-467c-b718-521c530a7330"
 					]
 				}
 			},

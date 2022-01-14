@@ -74,5 +74,12 @@ namespace TramontinaFilmes.WebApi.Infraestrutura
 
             return sessoesReturn;
         }
+
+        public async Task<IEnumerable<Sessao>> RecuperarTodosAsync()
+        {
+            return await _dbContext
+                            .Sessoes
+                            .AsQueryable().ToListAsync();
+        }
     }
 }
