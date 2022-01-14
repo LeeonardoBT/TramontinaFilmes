@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\" : \"Homem Aranha O retornp\",\r\n    \"duracao\" : 60,\r\n    \"sinopse\" : \"O retorno de um filme muito divertido\"\r\n}\r\n",
+					"raw": "{\r\n    \"titulo\" : \"2012\",\r\n    \"duracao\" : 90,\r\n    \"sinopse\" : \"Filme do fim do mundo\"\r\n}\r\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:5000/api/Filme/",
+					"raw": "http://localhost:5000/api/Filme/88e5d2b5-7f80-46f0-97e0-6ea01e754c4d",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -50,7 +50,7 @@
 					"path": [
 						"api",
 						"Filme",
-						""
+						"88e5d2b5-7f80-46f0-97e0-6ea01e754c4d"
 					]
 				}
 			},
@@ -84,7 +84,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"titulo\" : \"Pensamentos de Venâncio\",\r\n    \"duracao\" : 120,\r\n    \"sinopse\" : \"Um filme baseado em fatos reais\"\r\n}\r\n",
+					"raw": "{\r\n    \"titulo\" : \"2012\",\r\n    \"duracao\" : 110,\r\n    \"sinopse\" : \"Filme do fim do mundo\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -92,7 +92,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/Filme/48450d55-192f-467c-b718-521c530a7330",
+					"raw": "http://localhost:5000/api/Filme/88e5d2b5-7f80-46f0-97e0-6ea01e754c4d",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -101,7 +101,7 @@
 					"path": [
 						"api",
 						"Filme",
-						"48450d55-192f-467c-b718-521c530a7330"
+						"88e5d2b5-7f80-46f0-97e0-6ea01e754c4d"
 					]
 				}
 			},

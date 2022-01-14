@@ -12,7 +12,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"filmeId\" : \"d2fa1969-6dd6-4e9d-940c-f21818947289\",\r\n    \"dia\" : 11,\r\n    \"mes\" : 2,\r\n    \"ano\" : 2022,\r\n    \"horaInicio\" : 21,\r\n    \"minutoInicio\" : 30,\r\n    \"quantidadeLugares\" : 50,\r\n    \"valorIngresso\" : 25.0\r\n}",
+					"raw": "{\r\n    \"filmeId\" : \"88e5d2b5-7f80-46f0-97e0-6ea01e754c4d\",\r\n    \"dia\" : 12,\r\n    \"mes\" : 2,\r\n    \"ano\" : 2022,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 30,\r\n    \"quantidadeLugares\" : 60,\r\n    \"valorIngresso\" : 30.0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -41,7 +41,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"filmeId\" : \"d2fa1969-6dd6-4e9d-940c-f21818947289\",\r\n    \"dia\" : 30,\r\n    \"mes\" : 2,\r\n    \"ano\" : 2022,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 30,\r\n    \"quantidadeLugares\" : 50,\r\n    \"valorIngresso\" : 25.0\r\n}",
+					"raw": "{\r\n    \"filmeId\" : \"88e5d2b5-7f80-46f0-97e0-6ea01e754c4d\",\r\n    \"dia\" : 12,\r\n    \"mes\" : 2,\r\n    \"ano\" : 2022,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 30,\r\n    \"quantidadeLugares\" : 45,\r\n    \"valorIngresso\" : 30.0\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -49,7 +49,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/api/Sessao/4b6fad4f-f6bc-4d4a-81e7-1ab214b712fc",
+					"raw": "http://localhost:5000/api/Sessao/f64e67b1-dc62-4e92-9b32-27aaa74811ef",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -58,7 +58,7 @@
 					"path": [
 						"api",
 						"Sessao",
-						"4b6fad4f-f6bc-4d4a-81e7-1ab214b712fc"
+						"f64e67b1-dc62-4e92-9b32-27aaa74811ef"
 					]
 				}
 			},
@@ -69,17 +69,8 @@
 			"request": {
 				"method": "PUT",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"filmeId\" : \"7bb7fc1b-72b4-42a5-b538-ecda18eeb030\",\r\n    \"dia\" : 10,\r\n    \"mes\" : 20,\r\n    \"ano\" : 10,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 1,\r\n    \"quantidadeLugares\" : 2,\r\n    \"preco\" : 1.0\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:5000/api/Sessao/4b6fad4f-f6bc-4d4a-81e7-1ab214b712fc/2",
+					"raw": "http://localhost:5000/api/Sessao/f64e67b1-dc62-4e92-9b32-27aaa74811ef/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -88,8 +79,8 @@
 					"path": [
 						"api",
 						"Sessao",
-						"4b6fad4f-f6bc-4d4a-81e7-1ab214b712fc",
-						"2"
+						"f64e67b1-dc62-4e92-9b32-27aaa74811ef",
+						"1"
 					]
 				}
 			},
@@ -102,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"nomeFilme\" : \"Velozes\",\r\n    \"dia\" : 10\r\n}",
+					"raw": "{\r\n    \"nomeFilme\": \"Homem Ara\",\r\n    \"dia\" : 11,\r\n    \"mes\" : 2,\r\n    \"ano\" : 2022\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -127,21 +118,9 @@
 		},
 		{
 			"name": "Search Sessao",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"filmeId\" : \"7bb7fc1b-72b4-42a5-b538-ecda18eeb030\",\r\n    \"dia\" : 10,\r\n    \"mes\" : 20,\r\n    \"ano\" : 10,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 1,\r\n    \"quantidadeLugares\" : 2,\r\n    \"preco\" : 1.0\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
 					"raw": "http://localhost:5000/api/Sessao/145c4705-0e9f-490f-a90a-6d1ff0d59aca",
 					"protocol": "http",
@@ -160,23 +139,11 @@
 		},
 		{
 			"name": "Search All Sessao",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
 				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"filmeId\" : \"7bb7fc1b-72b4-42a5-b538-ecda18eeb030\",\r\n    \"dia\" : 10,\r\n    \"mes\" : 20,\r\n    \"ano\" : 10,\r\n    \"horaInicio\" : 20,\r\n    \"minutoInicio\" : 1,\r\n    \"quantidadeLugares\" : 2,\r\n    \"preco\" : 1.0\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
 				"url": {
-					"raw": "http://localhost:5000/api/Sessao/145c4705-0e9f-490f-a90a-6d1ff0d59aca",
+					"raw": "http://localhost:5000/api/Sessao/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -185,7 +152,7 @@
 					"path": [
 						"api",
 						"Sessao",
-						"145c4705-0e9f-490f-a90a-6d1ff0d59aca"
+						""
 					]
 				}
 			},
